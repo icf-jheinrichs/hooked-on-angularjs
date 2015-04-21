@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" data-ng-app="demoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Step 2 - Create a Controller with a List</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <script src="/angular/angular.min.js"></script>
+        <script src="/js/demoApp.js"></script>
+        <script src="/js/demoAppControllers.js"></script>
+    </head>
+    <body data-ng-controller="StepTwoCtrl">
+        <ul>
+            <li data-ng-repeat="phone in phoneList track by $index">{{phone.name}}</li>
+        </ul>
+    </body>
+</html>

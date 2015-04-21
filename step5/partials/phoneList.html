@@ -1,0 +1,13 @@
+<div>
+    <input type="text" data-ng-model="query" />
+
+    <select data-ng-model="orderProp">
+        <option value="">Sort By</option>
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+    </select>
+
+    <ul>
+        <li data-ng-repeat="phone in phoneList | orderBy:orderProp | filterBy:query"><p><a href="#/phones/{{phone.id}}">{{phone.name}}</a> - {{phone.snippet}}</p></li>
+    </ul>
+</div>

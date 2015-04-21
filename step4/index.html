@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-ng-app="demoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Step 4 - Filtering &amp; Sorting a List</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <script src="/angular/angular.min.js"></script>
+        <script src="/js/demoApp.js"></script>
+        <script src="/js/demoAppControllers.js"></script>
+    </head>
+    <body data-ng-controller="StepFourCtrl">
+        <input type="text" data-ng-model="query" />
+
+        <select data-ng-model="orderProp">
+            <option value="">Sort By</option>
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+        </select>
+
+        <ul>
+            <li data-ng-repeat="phone in phoneList | orderBy:orderProp | filter:query"><p>{{phone.name}} - {{phone.snippet}}</p></li>
+        </ul>
+    </body>
+</html>

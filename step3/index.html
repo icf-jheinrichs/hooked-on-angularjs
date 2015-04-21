@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" data-ng-app="demoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Step 3 - Utilize an External Datasource</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <script src="/angular/angular.min.js"></script>
+        <script src="/js/demoApp.js"></script>
+        <script src="/js/demoAppControllers.js"></script>
+    </head>
+    <body data-ng-controller="StepThreeCtrl">
+        <ul>
+            <li data-ng-repeat="phone in phoneList track by $index"><p>{{phone.name}} - {{phone.snippet}}</p></li>
+        </ul>
+    </body>
+</html>
